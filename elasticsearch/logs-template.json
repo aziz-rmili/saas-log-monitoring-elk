@@ -1,0 +1,22 @@
+{
+  "index_patterns": ["logs-*"],
+  "template": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 0
+    },
+    "mappings": {
+      "properties": {
+        "@timestamp":       { "type": "date" },
+        "level":            { "type": "keyword" },
+        "service":          { "type": "keyword" },
+        "endpoint":         { "type": "keyword" },
+        "http_status":      { "type": "integer" },
+        "response_time_ms": { "type": "float" },
+        "user_id":          { "type": "keyword" },
+        "client_ip":        { "type": "ip" },
+        "message":          { "type": "text" }
+      }
+    }
+  }
+}

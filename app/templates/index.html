@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LogMonitor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header><h1>LogMonitor</h1><p>Monitoring et analyse de logs : Hello World</p></header>
+  <main>
+    <h2>État des services</h2>
+    <table>
+      <thead><tr><th>Service</th><th>État</th><th>Détail</th></tr></thead>
+      <tbody>
+      {% for name, s in services.items() %}
+        <tr>
+          <td>{{ name }}</td>
+          <td class="{{ 'ok' if s.ok else 'ko' }}">{{ 'OK' if s.ok else 'KO' }}</td>
+          <td>{{ s.detail }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    <p><a href="/health">Voir /health (JSON)</a></p>
+  </main>
+</body>
+</html>

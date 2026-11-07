@@ -1,0 +1,10 @@
+body { font-family: system-ui, sans-serif; margin: 0; color: #1f2937; background: #f4f7fa; }
+header { background: #1f3a5f; color: #fff; padding: 1rem 1.5rem; }
+header h1 { margin: 0; font-size: 1.4rem; }
+header p { margin: .2rem 0 0; opacity: .8; }
+main { max-width: 640px; margin: 1.5rem auto; padding: 0 1rem; }
+table { width: 100%; border-collapse: collapse; background: #fff; }
+th, td { padding: .5rem .7rem; border: 1px solid #d5dde6; text-align: left; }
+th { background: #1f3a5f; color: #fff; }
+.ok { color: #2a9d8f; font-weight: 700; }
+.ko { color: #d64545; font-weight: 700; }
